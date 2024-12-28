@@ -1,60 +1,65 @@
-Mines Game GUI
-This repository contains a Python-based Minesweeper-style game built with Tkinter. Players wager virtual currency and uncover tiles to increase their winnings, avoiding hidden mines. The game offers dynamic risk-reward mechanics, adjustable settings, and a user-friendly interface.
+# Mines Game GUI
 
-Features
-Interactive Gameplay: Players click tiles to reveal safe spots, aiming to avoid mines while increasing profits through a multiplier system.
-Betting System: Place wagers using the "Bet Half" or "Bet All" options, with real-time updates to balance, profits, and multipliers.
-Customizable Settings: Adjust the number of hidden mines (1–20) via a dropdown menu, allowing for scalable difficulty.
-Dynamic Multipliers: Winnings are determined by a progressive multiplier table based on safe clicks and mine count.
-Cash-Out Option: Players can exit early to secure profits or risk continued play for higher rewards.
-Game State Management: Handles wins, losses, and restarts seamlessly, resetting the game board and balance for new rounds.
-How It Works
-Initialize the Game:
+This repository contains a Python-based graphical user interface (GUI) for a Minesweeper-inspired betting game. Players can place bets, uncover safe spots, and cash out their profits before hitting a mine.
 
-A 5x5 grid is displayed, with hidden mines randomly placed based on the selected difficulty.
-Bet Placement:
+---
 
-Players enter their bet amount or use the "Bet Half" or "Bet All" options.
-Gameplay:
+## Features
 
-Click tiles to reveal safe spots. Safe clicks increase the multiplier, while clicking a mine ends the game.
-Cash Out:
+### 🎮 Gameplay
+- **Minesweeper-style game mechanics:** Uncover safe spots on a grid to increase your multiplier while avoiding mines.
+- **Dynamic multipliers:** Safe clicks increase your multiplier based on the number of mines and the payment table.
+- **Cash out early:** Exit the game at any time to secure your profits.
 
-Players can exit early, securing their profits based on the current multiplier.
-Win/Loss Conditions:
+### 💰 Betting System
+- **Bet options:** Bet all or half of your current balance before each round.
+- **Profit calculation:** Earn profits based on your bet and the current multiplier.
+- **Balance management:** Game automatically resets when balance reaches zero.
 
-Reveal all safe tiles to win or click a mine to lose.
-Usage Instructions
-Clone the repository:
+### 🖥️ GUI
+- **Customizable grid size:** Default 5x5 grid, scalable to different dimensions.
+- **Dynamic UI updates:** Display balance, bet amount, multiplier, and profit in real time.
+- **Interactive controls:** Intuitive buttons and dropdown menus for gameplay settings.
 
-bash
-Copy code
+---
+
+## Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/username/mines-game-gui.git
 cd mines-game-gui
-Install Python 3.x and ensure Tkinter is available.
+```
 
-Run the script:
+### 2️⃣ Install Dependencies
+This project requires Python 3.x and the `tkinter` library (bundled with Python).
 
-bash
-Copy code
+### 3️⃣ Run the Game
+Run the game directly using:
+```bash
 python mines_game_gui.py
-Controls:
+```
 
-Adjust mine count using the dropdown menu.
-Enter your bet and click Submit Bet.
-Reveal tiles by clicking on them.
-Cash out using the Cash Out button to secure your profits.
-Dependencies
-Python 3.x
-Tkinter (Standard Library)
-Future Enhancements
-Add leaderboards to track high scores across sessions.
-Implement varying grid sizes for scalable gameplay.
-Add sound effects and animations for improved user engagement.
-This project demonstrates an engaging application of GUI programming in Python, combining elements of logic, strategy, and risk management for an interactive gaming experience.
+---
 
+## How to Play
 
+1. **Select Number of Mines:** Use the dropdown menu to choose the number of mines on the grid.
+2. **Place Your Bet:** Enter your bet amount using the dropdown menu (`Bet All` or `Bet Half`).
+3. **Click Grid Cells:** Uncover safe spots to increase your multiplier.
+4. **Cash Out:** Click the "Cash Out" button to secure your profit before hitting a mine.
 
+---
 
+## Payment Table
 
+The game uses a predefined payment table for calculating multipliers based on the number of mines and safe clicks. The table dynamically adjusts your multiplier as you uncover safe spots.
 
+---
+
+## Future Enhancements
+- **Persistent data:** Save and load game states for continuous play.
+- **Leaderboard:** Track high scores and player stats.
+- **Custom difficulty:** Allow users to set grid size and mines count.
+
+---
